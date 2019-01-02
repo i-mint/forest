@@ -4055,10 +4055,16 @@ filechooser.maximized placessidebar.sidebar,
 .nautilus-window.maximized placessidebar.sidebar {
   background-color: #eef2ee; }
 
+.nemo-window .nemo-window-pane .view, .nemo-window .nemo-window-pane iconview {
+  background-color: #ffffff; }
+.nemo-window .nemo-window-pane .iconview {
+  background-color: #ffffff; }
 .nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview {
-  background-color: #e6e6e6; }
+  background-color: #e8e8e8;
+  color: rgba(35, 51, 36, 0.2); }
 .nemo-window .nemo-inactive-pane .iconview {
-  background-color: #e6e6e6; }
+  background-color: #e8e8e8;
+  color: rgba(35, 51, 36, 0.2); }
 .nemo-window .sidebar {
   color: #233324;
   background-color: rgba(238, 242, 238, 0.95); }

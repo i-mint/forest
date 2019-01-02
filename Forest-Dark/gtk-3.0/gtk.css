@@ -4048,10 +4048,16 @@ filechooser.maximized placessidebar.sidebar,
 .nautilus-window.maximized placessidebar.sidebar {
   background-color: #0f2318; }
 
+.nemo-window .nemo-window-pane .view, .nemo-window .nemo-window-pane iconview {
+  background-color: #122a1d; }
+.nemo-window .nemo-window-pane .iconview {
+  background-color: #122a1d; }
 .nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview {
-  background-color: #040a07; }
+  background-color: #0C1C13;
+  color: rgba(255, 255, 255, 0.15); }
 .nemo-window .nemo-inactive-pane .iconview {
-  background-color: #040a07; }
+  background-color: #0C1C13;
+  color: rgba(255, 255, 255, 0.15); }
 .nemo-window .sidebar {
   color: #E0E5EC;
   background-color: rgba(15, 35, 24, 0.95); }
