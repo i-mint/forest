@@ -4051,16 +4051,14 @@ filechooser.maximized placessidebar.sidebar,
 .nautilus-window.maximized placessidebar.sidebar {
   background-color: #0f2318; }
 
-.nemo-window .nemo-window-pane .view, .nemo-window .nemo-window-pane iconview {
-  background-color: #ffffff; }
-.nemo-window .nemo-window-pane .iconview {
+.nemo-window .nemo-window-pane scrolledwindow {
   background-color: #ffffff; }
 .nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview {
-  background-color: #e8e8e8;
-  color: rgba(35, 51, 36, 0.2); }
+  background-color: rgba(15, 35, 24, 0.95);
+  color: rgba(255, 255, 255, 0.45); }
 .nemo-window .nemo-inactive-pane .iconview {
-  background-color: #e8e8e8;
-  color: rgba(35, 51, 36, 0.2); }
+  background-color: rgba(15, 35, 24, 0.95);
+  color: rgba(255, 255, 255, 0.45); }
 .nemo-window .sidebar {
   color: #E0E5EC;
   background-color: rgba(15, 35, 24, 0.95); }
