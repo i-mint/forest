@@ -4374,3 +4374,26 @@ filechooser placessidebar.sidebar scrollbar,
     background-color: rgba(8, 18, 12, 0.95); }
   .budgie-panel .workspace-add-button:active {
     background-color: rgba(8, 18, 12, 0.95); }
+
+.budgie-run-dialog {
+  background-color: #0C1C13;
+  border-radius: 1px;
+  border-color: #0C1C13;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.33); }
+  .budgie-run-dialog entry.search {
+    background-color: #0C1C13;
+    color: #E0E5EC;
+    border-radius: 1px;
+    border-color: #0C1C13;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(50, 83, 40, 0.34);
+    box-shadow: none; }
+    .budgie-run-dialog entry.search image {
+      color: #E0E5EC; }
+    .budgie-run-dialog entry.search label {
+      color: #E0E5EC; }
+    .budgie-run-dialog entry.search:focus {
+      box-shadow: none;
+      border-color: #0C1C13;
+      border-bottom: 1px solid #325328; }
