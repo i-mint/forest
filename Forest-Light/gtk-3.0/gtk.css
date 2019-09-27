@@ -4259,81 +4259,146 @@ filechooser placessidebar.sidebar scrollbar,
 @define-color wm_icon_unfocused_bg #B6B8C0;
 @define-color wm_icon_hover_bg #7A7F8B;
 @define-color wm_icon_active_bg #ffffff;
-.budgie-menu scrolledwindow {
-  background-color: #ffffff; }
 .budgie-menu.background {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-radius: 1px; }
+.budgie-menu scrolledwindow {
   background-color: #ffffff;
   border-color: #ffffff; }
 .budgie-menu .categories {
-  background-color: #F0f0f0;
+  background-color: rgba(224, 232, 224, 0.95);
   border-color: transparent;
   color: rgba(35, 51, 36, 0.78); }
+  .budgie-menu .categories label {
+    color: rgba(35, 51, 36, 0.78); }
 .budgie-menu .category-button {
   background-color: transparent;
-  color: rgba(35, 51, 36, 0.78); }
+  color: rgba(35, 51, 36, 0.78);
+  border-color: transparent;
+  border-radius: 1px; }
+  .budgie-menu .category-button label {
+    color: rgba(35, 51, 36, 0.78); }
   .budgie-menu .category-button:hover {
     background-color: rgba(112, 184, 94, 0.12);
-    border-color: rgba(112, 184, 94, 0.12);
-    border-radius: 1px;
-    color: #233324; }
+    color: #233324;
+    border-color: transparent;
+    border-radius: 1px; }
+    .budgie-menu .category-button:hover label {
+      color: #233324; }
   .budgie-menu .category-button:checked {
     background-color: #70B85E;
-    border-color: #ffffff;
     color: #ffffff;
+    border-color: #70B85E;
     border-radius: 1px; }
+    .budgie-menu .category-button:checked label {
+      color: #ffffff; }
   .budgie-menu .category-button:active {
     background-color: transparent;
+    color: #233324;
     border-color: rgba(35, 51, 36, 0.08);
     border-radius: 1px; }
     .budgie-menu .category-button:active label {
       color: #233324; }
 .budgie-menu row {
   background-color: #ffffff;
-  border-color: transparent; }
+  border-color: transparent;
+  border-radius: 1px;
+  color: rgba(35, 51, 36, 0.78); }
   .budgie-menu row label {
     color: rgba(35, 51, 36, 0.78); }
   .budgie-menu row:hover {
     background-color: rgba(112, 184, 94, 0.12);
     border-color: rgba(112, 184, 94, 0.12);
-    border-radius: 1px; }
+    border-radius: 1px;
+    color: #233324; }
     .budgie-menu row:hover label {
       color: #233324; }
   .budgie-menu row:active {
     background-color: transparent;
-    border-color: rgba(35, 51, 36, 0.12);
-    border-radius: 1px; }
+    border-color: rgba(112, 184, 94, 0.12);
+    border-radius: 1px;
+    color: #70B85E; }
     .budgie-menu row:active label {
       color: #70B85E; }
-  .budgie-menu row button:hover {
+  .budgie-menu row button {
     background-color: transparent;
-    border-color: transparent; }
-    .budgie-menu row button:hover label {
+    border-color: transparent;
+    border-radius: 1px;
+    color: rgba(35, 51, 36, 0.78); }
+    .budgie-menu row button label {
+      color: rgba(35, 51, 36, 0.78); }
+    .budgie-menu row button:hover {
+      background-color: transparent;
+      border-color: transparent;
+      border-radius: 1px;
       color: #233324; }
-.budgie-menu entry.search {
+      .budgie-menu row button:hover label {
+        color: #233324; }
+.budgie-menu entry.search, .budgie-menu entry.search:focus {
   border-style: none;
   background-color: transparent;
   padding-top: 7px;
   padding-bottom: 7px;
   border-radius: 1px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+  border-bottom: 1px solid #70B85E;
   box-shadow: none;
   font-size: 107%;
   color: #233324; }
 
 .budgie-panel {
   background-color: rgba(224, 232, 224, 0.95);
-  color: #233324; }
+  color: rgba(35, 51, 36, 0.78); }
   .budgie-panel widget button {
     background-color: transparent;
     border-color: transparent;
-    color: #233324; }
-    .budgie-panel widget button:hover, .budgie-panel widget button:active, .budgie-panel widget button:checked, .budgie-panel widget button:selected {
+    color: rgba(35, 51, 36, 0.78); }
+    .budgie-panel widget button label {
+      color: rgba(35, 51, 36, 0.78); }
+    .budgie-panel widget button image {
+      color: #233324; }
+    .budgie-panel widget button:hover {
+      background-color: transparent;
       border-color: transparent;
-      background-color: transparent; }
-    .budgie-panel widget button:hover image, .budgie-panel widget button:checked image, .budgie-panel widget button:selected image {
-      color: #70B85E; }
-    .budgie-panel widget button:active image {
-      color: #8fc881; }
+      color: #233324; }
+      .budgie-panel widget button:hover label {
+        color: #233324; }
+      .budgie-panel widget button:hover image {
+        color: #70B85E; }
+    .budgie-panel widget button:active {
+      background-color: transparent;
+      border-color: transparent;
+      color: #233324; }
+      .budgie-panel widget button:active label {
+        color: #233324; }
+      .budgie-panel widget button:active image {
+        color: #8fc881; }
+    .budgie-panel widget button:checked {
+      background-color: transparent;
+      border-color: transparent;
+      color: #233324; }
+      .budgie-panel widget button:checked label {
+        color: #233324; }
+      .budgie-panel widget button:checked image {
+        color: #70B85E; }
+  .budgie-panel .workspace-switcher .workspace-layout {
+    background-color: rgba(112, 184, 94, 0.12);
+    color: #ffffff; }
+  .budgie-panel .workspace-switcher .current-workspace {
+    background-color: #70B85E;
+    color: #ffffff; }
+  .budgie-panel .workspace-switcher .workspace-add-button {
+    background-color: rgba(112, 184, 94, 0.12); }
+    .budgie-panel .workspace-switcher .workspace-add-button image {
+      color: rgba(255, 255, 255, 0.78); }
+    .budgie-panel .workspace-switcher .workspace-add-button:hover {
+      background-color: rgba(112, 184, 94, 0.34); }
+      .budgie-panel .workspace-switcher .workspace-add-button:hover image {
+        color: #ffffff; }
+    .budgie-panel .workspace-switcher .workspace-add-button:active {
+      background-color: rgba(112, 184, 94, 0.78); }
+      .budgie-panel .workspace-switcher .workspace-add-button:active image {
+        color: #ffffff; }
 
 .budgie-popover {
   border-style: none;
@@ -4346,61 +4411,109 @@ filechooser placessidebar.sidebar scrollbar,
     background-color: transparent; }
   .budgie-popover.places-menu {
     background-color: #ffffff;
-    border-color: #ffffff; }
-    .budgie-popover.places-menu row:hover {
+    border-color: #ffffff;
+    border-radius: 1px;
+    color: rgba(35, 51, 36, 0.78); }
+    .budgie-popover.places-menu button {
       border-radius: 1px;
-      background-color: rgba(112, 184, 94, 0.12);
-      border-color: rgba(112, 184, 94, 0.12); }
-    .budgie-popover.places-menu button:hover {
       background-color: transparent;
       border-color: transparent;
-      color: #233324; }
+      color: rgba(35, 51, 36, 0.78); }
+      .budgie-popover.places-menu button label {
+        color: rgba(35, 51, 36, 0.78); }
+      .budgie-popover.places-menu button:hover {
+        border-radius: 1px;
+        background-color: transparent;
+        border-color: transparent;
+        color: #233324; }
+        .budgie-popover.places-menu button:hover label {
+          color: #233324; }
+    .budgie-popover.places-menu row {
+      border-radius: 1px;
+      background-color: #ffffff;
+      border-color: #ffffff;
+      color: rgba(35, 51, 36, 0.78); }
+      .budgie-popover.places-menu row label {
+        color: rgba(35, 51, 36, 0.78); }
+      .budgie-popover.places-menu row:hover {
+        border-radius: 1px;
+        background-color: rgba(112, 184, 94, 0.12);
+        border-color: rgba(112, 184, 94, 0.12);
+        color: #233324; }
+        .budgie-popover.places-menu row:hover label {
+          color: #233324; }
+      .budgie-popover.places-menu row:active {
+        border-radius: 1px;
+        background-color: transparent;
+        border-color: rgba(112, 184, 94, 0.12);
+        color: #70B85E; }
+        .budgie-popover.places-menu row:active label {
+          color: #70B85E; }
   .budgie-popover.user-menu {
     background-color: #ffffff;
-    border-color: #ffffff; }
-    .budgie-popover.user-menu row:hover {
+    border-color: #ffffff;
+    border-radius: 1px;
+    color: rgba(35, 51, 36, 0.78); }
+    .budgie-popover.user-menu button {
       border-radius: 1px;
-      background-color: rgba(112, 184, 94, 0.12);
-      border-color: rgba(112, 184, 94, 0.12); }
-    .budgie-popover.user-menu button:hover {
       background-color: transparent;
       border-color: transparent;
-      color: #233324; }
-
-.budgie-panel .workspace-switcher .workspace-layout {
-  background-color: rgba(196, 210, 196, 0.95);
-  color: #233324;
-  border-radius: 0px; }
-.budgie-panel .workspace-switcher .current-workspace {
-  background-color: #70B85E;
-  color: #ffffff; }
-.budgie-panel .workspace-add-button {
-  background-color: rgba(190, 205, 190, 0.95);
-  border-color: rgba(190, 205, 190, 0.95); }
-  .budgie-panel .workspace-add-button:hover {
-    background-color: rgba(224, 232, 224, 0.95); }
-  .budgie-panel .workspace-add-button:active {
-    background-color: rgba(224, 232, 224, 0.95); }
+      color: rgba(35, 51, 36, 0.78); }
+      .budgie-popover.user-menu button label {
+        color: rgba(35, 51, 36, 0.78); }
+      .budgie-popover.user-menu button:hover {
+        border-radius: 1px;
+        background-color: transparent;
+        border-color: transparent;
+        color: #233324; }
+        .budgie-popover.user-menu button:hover label {
+          color: #233324; }
+    .budgie-popover.user-menu row {
+      border-radius: 1px;
+      background-color: #ffffff;
+      border-color: #ffffff;
+      color: rgba(35, 51, 36, 0.78); }
+      .budgie-popover.user-menu row label {
+        color: rgba(35, 51, 36, 0.78); }
+      .budgie-popover.user-menu row:hover {
+        border-radius: 1px;
+        background-color: rgba(112, 184, 94, 0.12);
+        border-color: rgba(112, 184, 94, 0.12);
+        color: #233324; }
+        .budgie-popover.user-menu row:hover label {
+          color: #233324; }
+      .budgie-popover.user-menu row:active {
+        border-radius: 1px;
+        background-color: transparent;
+        border-color: rgba(112, 184, 94, 0.12);
+        color: #70B85E; }
+        .budgie-popover.user-menu row:active label {
+          color: #70B85E; }
 
 .budgie-run-dialog {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
   border-radius: 1px;
-  border-color: #ffffff;
-  box-shadow: 2px 4px rgba(0, 0, 0, 0.11); }
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.14); }
   .budgie-run-dialog entry.search {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
     color: #233324;
     border-radius: 1px;
-    border-color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.12);
     padding-top: 7px;
     padding-bottom: 7px;
-    border-bottom: 1px solid rgba(112, 184, 94, 0.34);
-    box-shadow: none; }
-    .budgie-run-dialog entry.search image {
-      color: #233324; }
-    .budgie-run-dialog entry.search label {
+    border-bottom: 1px solid rgba(112, 184, 94, 0.45);
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.14); }
+    .budgie-run-dialog entry.search label, .budgie-run-dialog entry.search image {
       color: #233324; }
     .budgie-run-dialog entry.search:focus {
-      box-shadow: none;
-      border-color: #ffffff;
-      border-bottom: 1px solid #70B85E; }
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #233324;
+      border-radius: 1px;
+      border-color: rgba(255, 255, 255, 0.12);
+      padding-top: 7px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #70B85E;
+      box-shadow: 1px 2px rgba(0, 0, 0, 0.14); }
+      .budgie-run-dialog entry.search:focus label, .budgie-run-dialog entry.search:focus image {
+        color: #233324; }
