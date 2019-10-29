@@ -3549,6 +3549,24 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
 .menu .spinner {
   opacity: 1; }
 
+.thunar .sidebar .view, .thunar .sidebar iconview {
+  background-color: rgba(238, 242, 238, 0.95);
+  color: #233324; }
+  .thunar .sidebar .view.cell:selected, .thunar .sidebar iconview.cell:selected, .thunar .sidebar .view.cell:selected:hover, .thunar .sidebar iconview.cell:selected:hover, .thunar .sidebar .view.cell:active, .thunar .sidebar iconview.cell:active {
+    background: #70B85E;
+    color: #ffffff; }
+  .thunar .sidebar .view.cell:hover, .thunar .sidebar iconview.cell:hover {
+    background-color: rgba(226, 233, 226, 0.95);
+    color: #233324; }
+.thunar notebook .view, .thunar notebook iconview {
+  background-color: #ffffff;
+  color: #233324; }
+  .thunar notebook .view .rubberband, .thunar notebook iconview .rubberband {
+    background-color: rgba(87, 158, 69, 0.2); }
+  .thunar notebook .view:selected, .thunar notebook iconview:selected {
+    background-color: #70B85E;
+    color: #ffffff; }
+
 UnityDecoration {
   -UnityDecoration-extents: 28px 1 1 1;
   -UnityDecoration-input-extents: 10px;
