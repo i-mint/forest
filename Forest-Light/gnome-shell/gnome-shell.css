@@ -1252,8 +1252,8 @@ StScrollBar {
 #dash {
   font-size: 1em;
   color: #233324;
-  background-color: rgba(31, 71, 49, 0.95);
-  border-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(24, 54, 37, 0.75);
+  border-color: rgba(112, 184, 94, 0.88);
   padding: 4px 0;
   border-radius: 0 3px 3px 0; }
   #dash:rtl {
