@@ -4064,7 +4064,8 @@ filechooser headerbar widget stack box.path-bar-box,
 .nautilus-window headerbar widget stack box.path-bar-box {
   color: #233324;
   border: none;
-  background-color: #f9f9f9; }
+  background-color: #f9f9f9;
+  border: 1px solid rgba(31, 55, 32, 0.1); }
   filechooser headerbar widget stack box.path-bar-box .path-bar button.text-button,
   .nautilus-window headerbar widget stack box.path-bar-box .path-bar button.text-button {
     border-top: 2px solid transparent;
