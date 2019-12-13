@@ -1757,7 +1757,7 @@ switch {
 menuitem:hover switch,
 row:selected switch,
 infobar switch {
-  background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected#@2.png")); }
 
 headerbar switch,
 .primary-toolbar switch {
@@ -1769,7 +1769,7 @@ switch:checked {
 menuitem:hover switch:checked,
 row:selected switch:checked,
 infobar switch:checked {
-  background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected#@2.png")); }
 
 headerbar switch:checked,
 .primary-toolbar switch:checked {
@@ -1781,7 +1781,7 @@ switch:disabled {
 menuitem:hover switch:disabled,
 row:selected switch:disabled,
 infobar switch:disabled {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected#@2.png")); }
 
 headerbar switch:disabled,
 .primary-toolbar switch:disabled {
@@ -1793,7 +1793,7 @@ switch:checked:disabled {
 menuitem:hover switch:checked:disabled,
 row:selected switch:checked:disabled,
 infobar switch:checked:disabled {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png")); }
+  background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected#@2.png")); }
 
 headerbar switch:checked:disabled,
 .primary-toolbar switch:checked:disabled {
