@@ -1502,6 +1502,39 @@ popover, popover.background {
   background-clip: border-box;
   background-color: #122A1D;
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.35); }
+  popover stack button,
+  popover.background stack button {
+    background-color: #153122;
+    border-color: transparntize(#325328, 0.94);
+    color: #E0E5EC; }
+    popover stack button label, popover stack button image,
+    popover.background stack button label,
+    popover.background stack button image {
+      color: #E0E5EC; }
+    popover stack button:hover,
+    popover.background stack button:hover {
+      background-color: #273e31;
+      border-color: transparntize(#325328, 0.94);
+      color: #E0E5EC; }
+      popover stack button:hover label, popover stack button:hover image,
+      popover.background stack button:hover label,
+      popover.background stack button:hover image {
+        color: #E0E5EC; }
+    popover stack button:active, popover stack button:focus, popover stack button:checked,
+    popover.background stack button:active,
+    popover.background stack button:focus,
+    popover.background stack button:checked {
+      background-color: #325328;
+      border-color: #2e4c25;
+      color: #ffffff; }
+      popover stack button:active label, popover stack button:active image, popover stack button:focus label, popover stack button:focus image, popover stack button:checked label, popover stack button:checked image,
+      popover.background stack button:active label,
+      popover.background stack button:active image,
+      popover.background stack button:focus label,
+      popover.background stack button:focus image,
+      popover.background stack button:checked label,
+      popover.background stack button:checked image {
+        color: #ffffff; }
   popover label,
   popover.background label {
     color: #E0E5EC;
