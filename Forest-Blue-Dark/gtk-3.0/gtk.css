@@ -4071,7 +4071,8 @@ filechooser.csd.background, filechooser placessidebar list,
 filechooser placessidebar.sidebar,
 .nautilus-window placessidebar.sidebar {
   background-color: rgba(18, 35, 43, 0.95);
-  border-left: 2px solid rgba(10, 20, 25, 0.95); }
+  border-left: 2px solid rgba(10, 20, 25, 0.95);
+  margin: -3px 0; }
   filechooser placessidebar.sidebar row.sidebar-row,
   .nautilus-window placessidebar.sidebar row.sidebar-row {
     border: none;

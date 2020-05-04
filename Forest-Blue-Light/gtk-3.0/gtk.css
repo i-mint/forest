@@ -4078,7 +4078,8 @@ filechooser.csd.background, filechooser placessidebar list,
 filechooser placessidebar.sidebar,
 .nautilus-window placessidebar.sidebar {
   background-color: rgba(218, 227, 231, 0.95);
-  border-left: 2px solid rgba(203, 215, 221, 0.95); }
+  border-left: 2px solid rgba(203, 215, 221, 0.95);
+  margin: -3px 0; }
   filechooser placessidebar.sidebar row.sidebar-row,
   .nautilus-window placessidebar.sidebar row.sidebar-row {
     border: none;
