@@ -118,13 +118,15 @@ entry {
   caret-color: currentColor;
   border-radius: 3px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #232323;
-  border-color: #cfd6e6;
+  color: rgba(35, 35, 35, 0.34);
+  border-color: rgba(68, 163, 210, 0.56);
   background-color: #ffffff; }
   entry.search {
     border-radius: 20px; }
+  entry image, entry image:hover {
+    color: inherit; }
   entry image {
-    color: #4f4f4f; }
+    color: rgba(35, 35, 35, 0.34); }
     entry image.left {
       padding-left: 0;
       padding-right: 5px; }
@@ -142,6 +144,8 @@ entry {
     color: #232323;
     border-color: #5e9ab8;
     background-color: #ffffff; }
+    entry:focus image, entry:focus image:hover {
+      color: inherit; }
   entry:disabled {
     color: rgba(35, 35, 35, 0.55);
     border-color: rgba(207, 214, 230, 0.55);
@@ -860,6 +864,10 @@ searchbar {
   border-color: #d1dce1;
   border-width: 0 0 1px;
   padding: 3px; }
+  searchbar entry.search {
+    background-color: #EDF1F3; }
+    searchbar entry.search:focus {
+      background-color: #EDF1F3; }
 
 actionbar {
   padding: 6px;
@@ -958,24 +966,26 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
     opacity: 0.6; }
 
 .primary-toolbar entry, headerbar entry {
-  color: rgba(39, 32, 32, 0.8);
-  border-color: rgba(39, 32, 32, 0.1);
-  background-color: rgba(255, 255, 255, 0.9); }
+  color: rgba(39, 32, 32, 0.36);
+  border-color: rgba(39, 32, 32, 0.03);
+  background-color: rgba(255, 255, 255, 0.89); }
   .primary-toolbar entry image, headerbar entry image, .primary-toolbar entry image:hover, headerbar entry image:hover {
     color: inherit; }
   .primary-toolbar entry:backdrop, headerbar entry:backdrop {
     opacity: 0.85; }
   .primary-toolbar entry:focus, headerbar entry:focus {
     color: #ffffff;
-    border-color: #5e9ab8;
+    border-color: #6aa1bd;
     background-color: #5e9ab8;
     background-clip: border-box; }
+    .primary-toolbar entry:focus image, headerbar entry:focus image, .primary-toolbar entry:focus image:hover, headerbar entry:focus image:hover {
+      color: inherit; }
     .primary-toolbar entry:focus image, headerbar entry:focus image {
       color: #ffffff; }
   .primary-toolbar entry:disabled, headerbar entry:disabled {
     color: rgba(39, 32, 32, 0.35);
-    border-color: rgba(39, 32, 32, 0.1);
-    background-color: rgba(255, 255, 255, 0.75); }
+    border-color: rgba(39, 32, 32, 0.03);
+    background-color: rgba(255, 255, 255, 0.74); }
   .primary-toolbar entry selection:focus, headerbar entry selection:focus {
     background-color: #ffffff;
     color: #5e9ab8; }
@@ -1235,20 +1245,22 @@ headerbar spinbutton:not(.vertical) > entry + button:not(:active):hover {
 .primary-toolbar combobox:disabled, headerbar combobox:disabled {
   color: rgba(39, 32, 32, 0.2); }
 .primary-toolbar combobox > .linked > button.combo, headerbar combobox > .linked > button.combo {
-  color: rgba(39, 32, 32, 0.8);
-  border-color: rgba(39, 32, 32, 0.1);
-  background-color: rgba(255, 255, 255, 0.9); }
+  color: rgba(39, 32, 32, 0.36);
+  border-color: rgba(39, 32, 32, 0.03);
+  background-color: rgba(255, 255, 255, 0.89); }
   .primary-toolbar combobox > .linked > button.combo image, headerbar combobox > .linked > button.combo image, .primary-toolbar combobox > .linked > button.combo image:hover, headerbar combobox > .linked > button.combo image:hover {
     color: inherit; }
   .primary-toolbar combobox > .linked > button.combo:hover, headerbar combobox > .linked > button.combo:hover {
     color: #ffffff;
-    border-color: #5e9ab8;
+    border-color: #6aa1bd;
     background-color: #5e9ab8;
     box-shadow: none; }
+    .primary-toolbar combobox > .linked > button.combo:hover image, headerbar combobox > .linked > button.combo:hover image, .primary-toolbar combobox > .linked > button.combo:hover image:hover, headerbar combobox > .linked > button.combo:hover image:hover {
+      color: inherit; }
   .primary-toolbar combobox > .linked > button.combo:disabled, headerbar combobox > .linked > button.combo:disabled {
     color: rgba(39, 32, 32, 0.35);
-    border-color: rgba(39, 32, 32, 0.1);
-    background-color: rgba(255, 255, 255, 0.75); }
+    border-color: rgba(39, 32, 32, 0.03);
+    background-color: rgba(255, 255, 255, 0.74); }
 .primary-toolbar combobox > .linked > entry.combo:dir(ltr), headerbar combobox > .linked > entry.combo:dir(ltr) {
   border-right-style: none; }
   .primary-toolbar combobox > .linked > entry.combo:dir(ltr):focus, headerbar combobox > .linked > entry.combo:dir(ltr):focus {
@@ -3096,6 +3108,8 @@ terminal-window notebook > header.top,
   color: #232323;
   border-color: #5e9ab8;
   background-color: #ffffff; }
+  .nemo-window .nemo-window-pane widget.entry image, .nemo-window .nemo-window-pane widget.entry image:hover {
+    color: inherit; }
 .nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button {
   color: rgba(39, 32, 32, 0.8);
   border-color: rgba(39, 32, 32, 0.1);
@@ -3546,19 +3560,21 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
   border-radius: 3px;
   padding-left: 4px;
   padding-right: 4px;
-  color: rgba(39, 32, 32, 0.8);
-  border-color: rgba(39, 32, 32, 0.1);
-  background-color: rgba(255, 255, 255, 0.9); }
+  color: rgba(39, 32, 32, 0.36);
+  border-color: rgba(39, 32, 32, 0.03);
+  background-color: rgba(255, 255, 255, 0.89); }
   .marlin-pathbar.pathbar image, .marlin-pathbar.pathbar image:hover {
     color: inherit; }
   .marlin-pathbar.pathbar:focus {
     color: #ffffff;
-    border-color: #5e9ab8;
+    border-color: #6aa1bd;
     background-color: #5e9ab8; }
+    .marlin-pathbar.pathbar:focus image, .marlin-pathbar.pathbar:focus image:hover {
+      color: inherit; }
   .marlin-pathbar.pathbar:disabled {
     color: rgba(39, 32, 32, 0.35);
-    border-color: rgba(39, 32, 32, 0.1);
-    background-color: rgba(255, 255, 255, 0.75); }
+    border-color: rgba(39, 32, 32, 0.03);
+    background-color: rgba(255, 255, 255, 0.74); }
   .marlin-pathbar.pathbar:active, .marlin-pathbar.pathbar:checked {
     color: #5e9ab8; }
 
