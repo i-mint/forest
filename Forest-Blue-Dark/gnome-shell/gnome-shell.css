@@ -74,15 +74,19 @@ StEntry {
   selected-color: #ffffff;
   transition-duration: 300ms;
   border-radius: 3px;
-  color: #F9F9F9;
+  color: rgba(249, 249, 249, 0.23);
   background-color: #14252f;
-  border: 1px solid #0e1a20;
+  border: 1px solid rgba(33, 70, 90, 0.45);
   box-shadow: inset 0 2px 4px rgba(20, 37, 47, 0.05); }
+  StEntry label, StEntry image, StEntry label:hover, StEntry image:hover {
+    color: inherit; }
   StEntry:focus, StEntry:hover {
     color: #F9F9F9;
     background-color: #14252f;
     border: 1px solid #284453;
     box-shadow: inset 0 2px 4px rgba(20, 37, 47, 0.05); }
+    StEntry:focus label, StEntry:focus image, StEntry:focus label:hover, StEntry:focus image:hover, StEntry:hover label, StEntry:hover image, StEntry:hover label:hover, StEntry:hover image:hover {
+      color: inherit; }
   StEntry:insensitive {
     color: rgba(249, 249, 249, 0.45);
     background-color: #152832;
@@ -92,6 +96,9 @@ StEntry {
     icon-size: 16px;
     warning-color: #F27835;
     padding: 0 4px; }
+  StEntry StLabel.hint-text {
+    margin-left: 2px;
+    color: rgba(249, 249, 249, 0.23); }
 
 StScrollView.vfade {
   -st-vfade-offset: 0px; }
@@ -137,6 +144,7 @@ StScrollBar {
   -slider-active-border-color: #14252F;
   -slider-border-width: 0;
   -slider-handle-radius: 7px;
+  -slider-handle-border-color: #F9F9F9;
   height: 18px;
   border: 0 solid transparent;
   border-right-width: 1px;
@@ -704,6 +712,16 @@ StScrollBar {
       color: white; }
       .unlock-screen #panel .panel-button:focus, .unlock-screen #panel .panel-button:hover, .unlock-screen #panel .panel-button:active, .login-screen #panel .panel-button:focus, .login-screen #panel .panel-button:hover, .login-screen #panel .panel-button:active, .lock-screen #panel .panel-button:focus, .lock-screen #panel .panel-button:hover, .lock-screen #panel .panel-button:active {
         color: white; }
+  #panel .panel-button.clock-display .clock {
+    color: white; }
+  #panel .panel-button.clock-display:active, #panel .panel-button.clock-display:overview, #panel .panel-button.clock-display:focus, #panel .panel-button.clock-display:checked {
+    box-shadow: none; }
+    #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:overview .clock, #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:checked .clock {
+      color: #ffffff;
+      background-color: #284453;
+      box-shadow: none;
+      border-bottom-width: 1px;
+      border-color: transparent; }
   #panel #panelActivities.panel-button {
     -natural-hpadding: 12px; }
   #panel .panel-status-indicators-box,
@@ -779,208 +797,210 @@ StScrollBar {
     icon-size: 16px; }
 
 #calendarArea {
-  padding: 0.75em 1.0em; }
-
-.calendar {
-  margin-bottom: 1em;
-  background-color: #172B35; }
-
-.calendar,
-.datemenu-today-button,
-.datemenu-displays-box,
-.message-list-sections {
-  margin: 0 0.4em; }
+  padding: 0px; }
 
 .datemenu-calendar-column {
-  spacing: 0.5em;
-  border: none; }
+  spacing: 6px;
+  border: 0 solid #0e1a20;
+  padding: 0 12px; }
+  .datemenu-calendar-column:ltr {
+    margin-right: 8px;
+    border-left-width: 0.5px; }
+  .datemenu-calendar-column:rtl {
+    margin-left: 8px;
+    border-right-width: 0.5px; }
+  .datemenu-calendar-column .datemenu-displays-box {
+    spacing: 6px; }
 
-.datemenu-displays-section {
-  padding-bottom: 3em; }
-
-.datemenu-today-button,
-.world-clocks-button,
-.weather-button,
-.message-list-section-title,
 .events-section-title {
-  border-radius: 3px;
+  font-weight: bold;
   padding: .4em; }
 
-.message-list-section-list:ltr {
-  padding-left: .4em; }
-
-.message-list-section-list:rtl {
-  padding-right: .4em; }
-
-.datemenu-today-button,
-.world-clocks-button,
-.weather-button,
-.message-list-section-title,
-.events-section-title {
-  padding: 7px 10px 7px 10px;
-  border: 1px solid rgba(20, 37, 47, 0); }
-  .datemenu-today-button:hover, .datemenu-today-button:focus,
-  .world-clocks-button:hover,
-  .world-clocks-button:focus,
-  .weather-button:hover,
-  .weather-button:focus,
-  .message-list-section-title:hover,
-  .message-list-section-title:focus,
-  .events-section-title:hover,
-  .events-section-title:focus {
-    text-shadow: 0 1px rgba(20, 37, 47, 0);
-    color: #F9F9F9;
-    background-color: #1f3948;
-    border: 1px solid #0e1a20;
-    box-shadow: inset 0 1px rgba(31, 57, 72, 0.05); }
-  .datemenu-today-button:active,
-  .world-clocks-button:active,
-  .weather-button:active,
-  .message-list-section-title:active,
-  .events-section-title:active {
-    text-shadow: 0 1px rgba(20, 37, 47, 0);
-    color: #ffffff;
-    background-color: #284453;
-    border: 1px solid #0e1a20;
-    box-shadow: inset 0 1px rgba(40, 68, 83, 0.05); }
-
-.datemenu-today-button .date-label {
-  font-size: 1.5em; }
-
-.world-clocks-header,
-.weather-header,
-.message-list-section-title,
-.events-section-title {
-  color: rgba(249, 249, 249, 0.4);
-  font-weight: bold; }
-
-.world-clocks-button:active .world-clocks-header,
-.weather-button:active .weather-header {
-  color: #ffffff; }
-
-.world-clocks-grid {
-  spacing-rows: 0.4em; }
-
-.weather-box {
-  spacing: 0.4em; }
-
-.calendar-month-label {
-  color: #F9F9F9;
-  font-weight: bold;
-  padding: 8px 0; }
-
-.pager-button {
-  color: transparent;
+.datemenu-today-button {
   background-color: transparent;
-  width: 32px;
-  border-radius: 2px; }
-  .pager-button:focus, .pager-button:hover, .pager-button:active {
+  border-color: transparent;
+  padding: 9px; }
+  .datemenu-today-button:hover, .datemenu-today-button:focus {
+    background-color: rgba(55, 64, 68, 0.56); }
+  .datemenu-today-button:active, .datemenu-today-button:selected {
+    background-color: #1b4055; }
+  .datemenu-today-button .day-label {
+    font-weight: bold;
+    color: #F9F9F9; }
+  .datemenu-today-button .date-label {
+    font-weight: 1000;
+    color: #F9F9F9; }
+
+.calendar .calendar-month-label {
+  color: #f2f3f3;
+  font-weight: bold;
+  padding: 6px 0; }
+.calendar .calendar-change-month-back, .calendar .calendar-change-month-back StIcon {
+  background-color: transparent;
+  color: #f2f3f3; }
+  .calendar .calendar-change-month-back:focus, .calendar .calendar-change-month-back:hover, .calendar .calendar-change-month-back:active, .calendar .calendar-change-month-back StIcon:focus, .calendar .calendar-change-month-back StIcon:hover, .calendar .calendar-change-month-back StIcon:active {
     background-color: transparent; }
-
-.calendar-change-month-back {
-  background-image: url("dark-assets/misc/calendar-arrow-left.svg"); }
-  .calendar-change-month-back:focus, .calendar-change-month-back:hover {
-    background-image: url("dark-assets/misc/calendar-arrow-left-hover.svg"); }
-  .calendar-change-month-back:active {
-    background-image: url("dark-assets/misc/calendar-arrow-left.svg"); }
-  .calendar-change-month-back:rtl {
-    background-image: url("dark-assets/misc/calendar-arrow-right.svg"); }
-    .calendar-change-month-back:rtl:focus, .calendar-change-month-back:rtl:hover {
-      background-image: url("dark-assets/misc/calendar-arrow-right-hover.svg"); }
-    .calendar-change-month-back:rtl:active {
-      background-image: url("dark-assets/misc/calendar-arrow-right.svg"); }
-
-.calendar-change-month-forward {
-  background-image: url("dark-assets/misc/calendar-arrow-right.svg"); }
-  .calendar-change-month-forward:focus, .calendar-change-month-forward:hover {
-    background-image: url("dark-assets/misc/calendar-arrow-right-hover.svg"); }
-  .calendar-change-month-forward:active {
-    background-image: url("dark-assets/misc/calendar-arrow-right.svg"); }
-  .calendar-change-month-forward:rtl {
-    background-image: url("dark-assets/misc/calendar-arrow-left.svg"); }
-    .calendar-change-month-forward:rtl:focus, .calendar-change-month-forward:rtl:hover {
-      background-image: url("dark-assets/misc/calendar-arrow-left-hover.svg"); }
-    .calendar-change-month-forward:rtl:active {
-      background-image: url("dark-assets/misc/calendar-arrow-left.svg"); }
-
-.calendar-day-base {
-  font-size: 80%;
-  text-align: center;
+  .calendar .calendar-change-month-back:rtl, .calendar .calendar-change-month-back StIcon:rtl {
+    color: #f2f3f3;
+    background-color: transparent; }
+    .calendar .calendar-change-month-back:rtl:focus, .calendar .calendar-change-month-back:rtl:hover, .calendar .calendar-change-month-back:rtl:active, .calendar .calendar-change-month-back StIcon:rtl:focus, .calendar .calendar-change-month-back StIcon:rtl:hover, .calendar .calendar-change-month-back StIcon:rtl:active {
+      background-color: transparent; }
+.calendar .calendar-change-month-forward, .calendar .calendar-change-month-forward StIcon {
+  color: #f2f3f3;
+  background-color: transparent; }
+  .calendar .calendar-change-month-forward:focus, .calendar .calendar-change-month-forward:hover, .calendar .calendar-change-month-forward:active, .calendar .calendar-change-month-forward StIcon:focus, .calendar .calendar-change-month-forward StIcon:hover, .calendar .calendar-change-month-forward StIcon:active {
+    background-color: transparent; }
+  .calendar .calendar-change-month-forward:rtl, .calendar .calendar-change-month-forward StIcon:rtl {
+    background-color: transparent;
+    color: #f2f3f3; }
+    .calendar .calendar-change-month-forward:rtl:focus, .calendar .calendar-change-month-forward:rtl:hover, .calendar .calendar-change-month-forward:rtl:active, .calendar .calendar-change-month-forward StIcon:rtl:focus, .calendar .calendar-change-month-forward StIcon:rtl:hover, .calendar .calendar-change-month-forward StIcon:rtl:active {
+      background-color: transparent; }
+.calendar .pager-button {
+  height: 25px;
+  width: 25px;
+  background-color: transparent; }
+  .calendar .pager-button:hover, .calendar .pager-button:active, .calendar .pager-button:focus:hover {
+    background-color: #374044;
+    border-radius: 16px; }
+  .calendar .pager-button:focus, .calendar .pager-button:selected, .calendar .pager-button:checked {
+    background-color: transparent; }
+.calendar .calendar-day-base {
+  color: #babfc2;
   width: 25px;
   height: 25px;
-  padding: 0.1em;
-  margin: 2px;
-  border-radius: 12.5px; }
-  .calendar-day-base:hover, .calendar-day-base:focus {
-    background-color: rgba(0, 0, 0, 0.1); }
-  .calendar-day-base:active, .calendar-day-base:selected {
-    color: #F9F9F9;
-    background-color: rgba(0, 0, 0, 0.15);
-    border-width: 0; }
-  .calendar-day-base:checked {
-    background-color: red; }
-  .calendar-day-base.calendar-day-heading {
-    color: rgba(249, 249, 249, 0.85);
-    margin-top: 1em;
-    font-size: 80%;
-    font-weight: bold;
-    background-color: transparent;
-    padding: 2px;
-    text-align: center;
-    border-bottom-width: 2px;
-    border-color: #284453;
-    border-radius: 0px; }
-
-.calendar-day {
-  border-width: 2px;
-  color: rgba(249, 249, 249, 0.8);
-  background-color: #14252F;
-  width: 30px;
-  height: 20px;
-  border-radius: 4px;
-  border-color: #284453; }
-
-.calendar-day-top {
-  border-top-width: 2px; }
-
-.calendar-day-left {
-  border-left-width: 2px; }
-
-.calendar-nonwork-day {
-  color: #F9F9F9;
-  font-weight: bold; }
-
-.calendar-today,
-.calendar-today:active,
-.calendar-today:selected,
-.calendar-today:focus,
-.calendar-today:hover {
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #284453;
-  border-width: 0; }
-
-.calendar-day-with-events {
-  font-weight: bold;
-  background-image: url("common-assets/misc/calendar-today.svg"); }
-
-.calendar-today.calendar-day-with-events {
-  color: #ffffff; }
-
-.calendar-other-month-day {
-  color: rgba(249, 249, 249, 0.3);
-  opacity: 1; }
-
-.calendar-week-number {
-  font-size: 70%;
-  font-weight: bold;
-  width: 2.3em;
-  height: 1.8em;
   border-radius: 2px;
-  padding: 0.5em 0 0;
-  margin: 6px;
-  background-color: rgba(40, 68, 83, 0.23);
-  color: black; }
+  margin: 1px;
+  padding: 0.5px;
+  text-align: center;
+  font-feature-settings: "tnum"; }
+  .calendar .calendar-day-base:hover, .calendar .calendar-day-base:focus {
+    color: #eeefef;
+    background-color: #374044;
+    border-radius: 16px; }
+  .calendar .calendar-day-base:active, .calendar .calendar-day-base:selected {
+    background-color: #1b4055; }
+  .calendar .calendar-day-base.calendar-day-heading {
+    color: #eeefef;
+    background-color: transparent;
+    border-weight: 0.1px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.2px;
+    margin-top: 3px; }
+.calendar .calendar-day-top {
+  border-top-width: 0px; }
+.calendar .calendar-day-left {
+  border-left-width: 0px; }
+.calendar .calendar-work-day {
+  background-color: transparent;
+  border-color: rgba(40, 68, 83, 0.56);
+  border-width: 0.7px; }
+.calendar .calendar-nonwork-day {
+  color: #e2e4e5;
+  font-weight: bold;
+  background-color: transparent;
+  border-color: rgba(40, 68, 83, 0.56);
+  border-width: 0.7px; }
+.calendar .calendar-today {
+  background-color: #284453;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 2px; }
+  .calendar .calendar-today:hover, .calendar .calendar-today:selected:hover {
+    background-color: #45525a;
+    color: #ffffff;
+    border-radius: 2px; }
+  .calendar .calendar-today:selected, .calendar .calendar-today:active, .calendar .calendar-today:hover:active {
+    background-color: #284453;
+    color: #ffffff; }
+.calendar .calendar-day-with-events {
+  background-image: url("common-assets/misc/calendar-today.svg");
+  font-weight: bold;
+  color: #3a6379; }
+.calendar .calendar-other-month-day {
+  color: rgba(249, 249, 249, 0.23);
+  border-color: rgba(40, 68, 83, 0.23); }
+.calendar .calendar-week-number {
+  font-weight: bold;
+  height: 8px;
+  width: 12px;
+  border-radius: 2px;
+  padding: 4px;
+  padding: 0.77em 4px 0 4px;
+  background-color: rgba(249, 249, 249, 0.01);
+  color: #eeefef;
+  text-align: center; }
+
+.world-clocks-button {
+  color: #babfc2;
+  border-radius: 4px;
+  box-shadow: none; }
+  .world-clocks-button:hover {
+    background-color: rgba(55, 64, 68, 0.56); }
+  .world-clocks-button:active {
+    background-color: #1b4055; }
+    .world-clocks-button:active .world-clocks-grid, .world-clocks-button:active .world-clocks-timezone {
+      background-color: transparent; }
+    .world-clocks-button:active .world-clocks-time {
+      background-color: #163344;
+      border-color: #122a38; }
+  .world-clocks-button .world-clocks-city {
+    font-size: 7;
+    color: inherit; }
+  .world-clocks-button .world-clocks-time {
+    color: #eeefef;
+    border-radius: 2px;
+    padding: 4px;
+    background-color: rgba(249, 249, 249, 0);
+    font-weight: bold;
+    border-width: 0.7px;
+    border-color: rgba(40, 68, 83, 0.56); }
+  .world-clocks-button .world-clocks-timezone {
+    font-size: 6;
+    color: inherit; }
+  .world-clocks-button .world-clocks-header {
+    font-weight: bold;
+    color: #f2f3f3; }
+  .world-clocks-button .world-clocks-grid {
+    spacing-rows: 6px;
+    spacing-columns: 12px; }
+
+.weather-button {
+  color: #babfc2;
+  border-radius: 4px;
+  box-shadow: none; }
+  .weather-button:hover {
+    background-color: rgba(55, 64, 68, 0.56); }
+  .weather-button:active {
+    background-color: #1b4055; }
+    .weather-button:active .weather-forecast-icon {
+      color: rgba(249, 249, 249, 0.56); }
+  .weather-button .weather-box {
+    spacing: 10px; }
+  .weather-button .weather-header-box {
+    spacing: 6px; }
+  .weather-button .weather-header {
+    color: #f2f3f3;
+    font-weight: bold; }
+    .weather-button .weather-header.location {
+      color: #babfc2;
+      font-weight: normal;
+      font-size: 8; }
+  .weather-button .weather-grid {
+    spacing-rows: 6px;
+    spacing-columns: 12px; }
+  .weather-button .weather-forecast-time {
+    color: #babfc2;
+    font-feature-settings: "tnum";
+    font-size: 7;
+    font-weight: normal;
+    padding-top: 0.2em;
+    padding-bottom: 0.4em; }
+  .weather-button .weather-forecast-icon {
+    icon-size: 2.18em;
+    color: rgba(249, 249, 249, 0.56); }
+  .weather-button .weather-forecast-temp {
+    font-weight: bold; }
 
 .message-list {
   width: 31.5em; }
@@ -1093,17 +1113,23 @@ StScrollBar {
   icon-size: 16px; }
 
 .window-close {
+  border-image: url("common-assets/misc/close.svg");
   background-image: url("common-assets/misc/close.svg");
+  background-color: transparent;
   background-size: 26px;
   height: 26px;
   width: 26px; }
   .window-close:hover {
+    border-image: url("common-assets/misc/close-hover.svg");
     background-image: url("common-assets/misc/close-hover.svg");
+    background-color: transparent;
     background-size: 26px;
     height: 26px;
     width: 26px; }
   .window-close:active {
+    border-image: url("common-assets/misc/close-active.svg");
     background-image: url("common-assets/misc/close-active.svg");
+    background-color: transparent;
     background-size: 26px;
     height: 26px;
     width: 26px; }
@@ -1189,24 +1215,36 @@ StScrollBar {
   width: 320px;
   padding: 7px 9px;
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  background-color: rgba(20, 37, 47, 0.12); }
-  .search-entry label, .search-entry image {
-    color: #F9F9F9; }
+  color: rgba(249, 249, 249, 0.23);
+  background-color: #14252f;
+  border: 1px solid rgba(33, 70, 90, 0.45);
+  box-shadow: inset 0 2px 4px rgba(20, 37, 47, 0.05); }
+  .search-entry label, .search-entry image, .search-entry label:hover, .search-entry image:hover {
+    color: inherit; }
+  .search-entry:hover {
+    color: rgba(249, 249, 249, 0.23);
+    background-color: #14252f;
+    border: 1px solid rgba(33, 70, 90, 0.45);
+    box-shadow: inset 0 2px 4px rgba(20, 37, 47, 0.05); }
+    .search-entry:hover label, .search-entry:hover image, .search-entry:hover label:hover, .search-entry:hover image:hover {
+      color: inherit; }
   .search-entry:focus {
-    padding: 7px 9px; }
+    padding: 7px 9px;
+    color: #F9F9F9;
+    background-color: #14252f;
+    border: 1px solid #284453;
+    box-shadow: inset 0 2px 4px rgba(20, 37, 47, 0.05);
+    caret-color: #F9F9F9;
+    selection-background-color: #284453;
+    selected-color: #ffffff; }
+    .search-entry:focus label, .search-entry:focus image, .search-entry:focus label:hover, .search-entry:focus image:hover {
+      color: inherit; }
+    .search-entry:focus .search-entry-icon {
+      color: #F9F9F9; }
   .search-entry .search-entry-icon {
     icon-size: 16px;
     padding: 0 4px;
-    color: #F9F9F9; }
-  .search-entry:hover, .search-entry:focus {
-    color: #ffffff;
-    caret-color: #ffffff;
-    background-color: transparent;
-    selection-background-color: #ffffff;
-    selected-color: #284453; }
-    .search-entry:hover .search-entry-icon, .search-entry:focus .search-entry-icon {
-      color: #ffffff; }
+    color: rgba(249, 249, 249, 0.23); }
 
 #searchResultsBin {
   max-width: 1000px; }
@@ -2035,3 +2073,11 @@ StScrollBar {
   border: 1px solid grey;
   border-radius: 2px;
   padding: 6px; }
+
+.calendar, .world-clocks-button, .weather-button {
+  background-color: #152730;
+  padding: 0;
+  padding: 4px 2px;
+  border: 1px;
+  border-radius: 4px;
+  border-color: #0e1a20; }
