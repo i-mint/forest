@@ -4381,6 +4381,14 @@ filechooser placessidebar.sidebar scrollbar,
   .nautilus-window placessidebar.sidebar scrollbar trough, .nemo-window .sidebar scrollbar trough, .caja-side-pane scrollbar trough {
     background-color: rgba(7, 17, 12, 0.95); }
 
+overlay calendar-view event {
+  background-image: linear-gradient(to top left, #233b1c, #233b1c);
+  border: 2px solid #1f3419; }
+  overlay calendar-view event label {
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: normal;
+    padding: 4px 6px; }
+
 @define-color theme_fg_color #E0E5EC;
 @define-color theme_text_color #E0E5EC;
 @define-color theme_bg_color #122A1D;
