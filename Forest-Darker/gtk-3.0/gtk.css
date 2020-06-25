@@ -4865,7 +4865,15 @@ overlay calendar-view event {
 .raven-frame calendar.raven-calendar:selected {
   background-color: #70B85E;
   color: #ffffff;
-  border-radius: 2px; }
+  border-radius: 4px; }
+.raven-frame calendar.raven-calendar.header {
+  color: #233324; }
+.raven-frame calendar.raven-calendar.button, .raven-frame calendar.raven-calendar.button:focus {
+  color: rgba(35, 51, 36, 0.6);
+  background-color: transparent; }
+  .raven-frame calendar.raven-calendar.button:hover, .raven-frame calendar.raven-calendar.button:focus:hover {
+    color: #233324;
+    background-color: transparent; }
 
 .background headerbar entry.pathbar {
   margin: 0px;
