@@ -3644,6 +3644,42 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
   border: 0.5px solid #858585;
   border-radius: 2px; }
 
+#whiskermenu-window {
+  background-color: #EDF1F3;
+  color: #232323; }
+  #whiskermenu-window stack {
+    background-color: #EDF1F3;
+    color: #232323; }
+  #whiskermenu-window .view, #whiskermenu-window iconview {
+    background-color: #ffffff;
+    color: #232323; }
+    #whiskermenu-window .view:selected, #whiskermenu-window iconview:selected {
+      background-color: #ededed;
+      color: inherit; }
+  #whiskermenu-window button {
+    margin-right: 9px;
+    background-color: #EDF1F3;
+    color: #232323;
+    border: none; }
+    #whiskermenu-window button:hover {
+      background-color: #d8e0e5;
+      color: inherit; }
+    #whiskermenu-window button:active, #whiskermenu-window button:checked {
+      background-color: #5e9ab8;
+      color: #ffffff; }
+  #whiskermenu-window entry:focus, #whiskermenu-window entry.search {
+    color: #232323;
+    border-color: #5e9ab8;
+    background-color: #ffffff; }
+    #whiskermenu-window entry:focus image, #whiskermenu-window entry:focus image:hover, #whiskermenu-window entry.search image, #whiskermenu-window entry.search image:hover {
+      color: inherit; }
+
+#whiskermenu-button {
+  color: #232323;
+  border-left: 22px solid rgba(128, 159, 173, 0.95);
+  border-right: 22px solid rgba(128, 159, 173, 0.95);
+  background-color: rgba(128, 159, 173, 0.95); }
+
 UnityDecoration {
   -UnityDecoration-extents: 28px 1 1 1;
   -UnityDecoration-input-extents: 10px;
