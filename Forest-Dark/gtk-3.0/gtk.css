@@ -241,6 +241,8 @@ button {
   color: #E0E5EC;
   border-color: #09150e;
   background-color: #0f2318; }
+  button:backdrop {
+    color: rgba(224, 229, 236, 0.67); }
   button separator {
     margin: 4px 1px; }
   button.flat, button.sidebar-button {
@@ -264,6 +266,8 @@ button {
     background-color: #325328;
     background-clip: padding-box;
     transition-duration: 50ms; }
+    button:active:backdrop, button:checked:backdrop {
+      color: rgba(255, 255, 255, 0.67); }
     button:active:not(:disabled) label:disabled, button:checked:not(:disabled) label:disabled {
       color: inherit;
       opacity: 0.6; }
@@ -464,6 +468,8 @@ button {
   color: #E0E5EC;
   border-color: #09150e;
   background-color: #0f2318; }
+  .inline-toolbar toolbutton > button:backdrop {
+    color: rgba(224, 229, 236, 0.67); }
   .inline-toolbar toolbutton > button:hover {
     color: #E0E5EC;
     border-color: #09150e;
@@ -472,6 +478,8 @@ button {
     color: #ffffff;
     border-color: #09150e;
     background-color: #325328; }
+    .inline-toolbar toolbutton > button:active:backdrop, .inline-toolbar toolbutton > button:checked:backdrop {
+      color: rgba(255, 255, 255, 0.67); }
   .inline-toolbar toolbutton > button:disabled {
     border-color: rgba(9, 21, 14, 0.55);
     background-color: rgba(15, 35, 24, 0.55); }
@@ -1703,15 +1711,21 @@ notebook {
     notebook > header > tabs > tab {
       color: rgba(224, 229, 236, 0.45);
       background-color: rgba(12, 28, 19, 0); }
+      notebook > header > tabs > tab:backdrop {
+        color: rgba(224, 229, 236, 0.23); }
       notebook > header > tabs > tab:hover:not(:checked) {
         color: rgba(224, 229, 236, 0.725);
         background-color: rgba(27, 64, 43, 0.5);
         border-color: #09150e; }
+        notebook > header > tabs > tab:hover:not(:checked):backdrop {
+          color: inherit; }
       notebook > header > tabs > tab:checked {
         color: #E0E5EC;
         background-color: rgba(12, 28, 19, 0.7);
         border-color: #09150e;
         padding-top: 0px; }
+        notebook > header > tabs > tab:checked:backdrop {
+          color: rgba(224, 229, 236, 0.78); }
       notebook > header > tabs > tab button.flat, notebook > header > tabs > tab button.sidebar-button {
         min-height: 22px;
         min-width: 16px;
@@ -2755,6 +2769,8 @@ colorswatch#add-color-button {
   color: #E0E5EC;
   border-color: #09150e;
   background-color: #0f2318; }
+  colorswatch#add-color-button:backdrop {
+    color: rgba(224, 229, 236, 0.67); }
   colorswatch#add-color-button:hover {
     color: #E0E5EC;
     border-color: #09150e;
@@ -3620,6 +3636,10 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
   .thunar .sidebar .view.cell:hover, .thunar .sidebar iconview.cell:hover {
     background-color: rgba(21, 49, 34, 0.95);
     color: #E0E5EC; }
+  .thunar .sidebar .view.cell:selected:backdrop, .thunar .sidebar iconview.cell:selected:backdrop {
+    color: rgba(255, 255, 255, 0.89); }
+  .thunar .sidebar .view:backdrop, .thunar .sidebar iconview:backdrop, .thunar .sidebar .view.cell:backdrop, .thunar .sidebar iconview.cell:backdrop {
+    color: rgba(224, 229, 236, 0.67); }
 .thunar notebook .view, .thunar notebook iconview {
   background-color: #0C1C13;
   color: #E0E5EC; }
@@ -3628,6 +3648,10 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
   .thunar notebook .view:selected, .thunar notebook iconview:selected {
     background-color: #325328;
     color: #ffffff; }
+    .thunar notebook .view:selected:backdrop, .thunar notebook iconview:selected:backdrop {
+      color: rgba(255, 255, 255, 0.67); }
+  .thunar notebook .view:backdrop, .thunar notebook iconview:backdrop {
+    color: rgba(224, 229, 236, 0.67); }
 .thunar notebook tabs > tab button.flat image, .thunar notebook tabs > tab button.sidebar-button image {
   background-color: transparent;
   border: 0.5px solid transparent;
@@ -4002,6 +4026,8 @@ GtkListBox .h4 {
   color: #E0E5EC;
   border-color: #09150e;
   background-color: #0f2318; }
+  #content_frame button:backdrop {
+    color: rgba(224, 229, 236, 0.67); }
   #content_frame button:hover {
     color: #E0E5EC;
     border-color: #09150e;
@@ -4010,6 +4036,8 @@ GtkListBox .h4 {
     color: #ffffff;
     border-color: #09150e;
     background-color: #325328; }
+    #content_frame button:active:backdrop, #content_frame button:checked:backdrop {
+      color: rgba(255, 255, 255, 0.67); }
   #content_frame button:disabled {
     border-color: rgba(9, 21, 14, 0.55);
     background-color: rgba(15, 35, 24, 0.55); }
@@ -4140,6 +4168,9 @@ filechooser placessidebar.sidebar,
         color: #ffffff;
         border-color: #09150e;
         background-color: #325328; }
+        filechooser placessidebar.sidebar row.sidebar-row:not(:selected) button.sidebar-button:active:backdrop,
+        .nautilus-window placessidebar.sidebar row.sidebar-row:not(:selected) button.sidebar-button:active:backdrop {
+          color: rgba(255, 255, 255, 0.67); }
       filechooser placessidebar.sidebar row.sidebar-row:not(:selected) button.sidebar-button:not(:hover):not(:active) > image,
       .nautilus-window placessidebar.sidebar row.sidebar-row:not(:selected) button.sidebar-button:not(:hover):not(:active) > image {
         opacity: 0.5; }
