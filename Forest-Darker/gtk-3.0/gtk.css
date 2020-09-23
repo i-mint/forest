@@ -1597,7 +1597,7 @@ cursor-handle {
 notebook {
   padding: 0; }
   notebook.frame {
-    border: 1px solid #d9d9d9; }
+    border: 0px solid #d9d9d9; }
     notebook.frame > header {
       margin: -1px; }
       notebook.frame > header.top {
@@ -1618,15 +1618,7 @@ notebook {
     background-color: #ffffff; }
   notebook > header {
     padding: 2px;
-    background-color: #F0f0f0; }
-    notebook > header.top {
-      box-shadow: inset 0 -1px #d9d9d9; }
-    notebook > header.bottom {
-      box-shadow: inset 0 1px #d9d9d9; }
-    notebook > header.right {
-      box-shadow: inset 1px 0 #d9d9d9; }
-    notebook > header.left {
-      box-shadow: inset -1px 0 #d9d9d9; }
+    background-color: #ffffff; }
     notebook > header.top {
       padding-bottom: 0; }
       notebook > header.top > tabs > tab {
@@ -1699,32 +1691,24 @@ notebook {
         color: #233324; }
       notebook > header > tabs > arrow:disabled {
         color: rgba(35, 51, 36, 0.25); }
-    notebook > header.top > tabs > tab:hover:not(:checked) {
-      box-shadow: inset 0 -1px #d9d9d9; }
-    notebook > header.bottom > tabs > tab:hover:not(:checked) {
-      box-shadow: inset 0 1px #d9d9d9; }
-    notebook > header.left > tabs > tab:hover:not(:checked) {
-      box-shadow: inset -1px 0 #d9d9d9; }
-    notebook > header.right > tabs > tab:hover:not(:checked) {
-      box-shadow: inset 1px 0 #d9d9d9; }
     notebook > header > tabs > tab {
       color: rgba(35, 51, 36, 0.55);
-      background-color: rgba(255, 255, 255, 0); }
+      background-color: rgba(240, 240, 240, 0.9); }
       notebook > header > tabs > tab:backdrop {
-        color: rgba(35, 51, 36, 0.33); }
+        color: rgba(35, 51, 36, 0.25);
+        background-color: rgba(240, 240, 240, 0.8); }
       notebook > header > tabs > tab:hover:not(:checked) {
         color: rgba(35, 51, 36, 0.775);
-        background-color: rgba(255, 255, 255, 0.5);
-        border-color: #d9d9d9; }
+        background-color: rgba(241, 241, 241, 0.5); }
         notebook > header > tabs > tab:hover:not(:checked):backdrop {
-          color: inherit; }
+          color: rgba(35, 51, 36, 0.475);
+          background-color: rgba(241, 241, 241, 0.3); }
       notebook > header > tabs > tab:checked {
         color: #233324;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-color: #d9d9d9;
+        background-color: #ffffff;
         padding-top: 0px; }
         notebook > header > tabs > tab:checked:backdrop {
-          color: rgba(35, 51, 36, 0.78); }
+          color: rgba(35, 51, 36, 0.5); }
       notebook > header > tabs > tab button.flat, notebook > header > tabs > tab button.sidebar-button {
         min-height: 22px;
         min-width: 16px;
@@ -4319,12 +4303,17 @@ filechooser headerbar widget stack box.path-bar-box,
     .nautilus-window headerbar widget stack box.path-bar-box .path-bar button.text-button:disabled {
       color: rgba(207, 218, 231, 0.4); }
 
+.nemo-window paned:last-child > separator:not(.horizontal) {
+  min-width: 2px;
+  min-height: 2px;
+  background-color: #ededed;
+  background-image: linear-gradient(to right, #ededed, #ededed); }
 .nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview {
   background-color: #fafafa;
-  color: rgba(35, 51, 36, 0.95); }
+  color: rgba(35, 51, 36, 0.67); }
 .nemo-window .nemo-inactive-pane .iconview {
   background-color: #fafafa;
-  color: rgba(35, 51, 36, 0.78); }
+  color: rgba(35, 51, 36, 0.67); }
 .nemo-window .sidebar {
   color: #E0E5EC;
   background-color: rgba(15, 35, 24, 0.95); }
