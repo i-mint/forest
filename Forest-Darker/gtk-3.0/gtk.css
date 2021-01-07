@@ -1823,6 +1823,8 @@ switch {
     color: transparent;
     border: none;
     box-shadow: none; }
+  popover switch image, popover switch {
+    color: transparent; }
 
 switch {
   background-image: -gtk-scaled(url("assets/switch.png"), url("assets/switch@2.png")); }
@@ -4579,6 +4581,12 @@ overlay calendar-view event {
     color: rgba(35, 51, 36, 0.78);
     font-weight: normal;
     padding: 4px 6px; }
+
+event.slanted-end label {
+  color: rgba(0, 0, 0, 0.8);
+  padding: 4px 6px; }
+event.slanted-end:backdrop label {
+  color: rgba(0, 0, 0, 0.6); }
 
 @define-color theme_fg_color #233324;
 @define-color theme_text_color #233324;
